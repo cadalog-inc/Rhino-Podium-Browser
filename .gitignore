@@ -1,0 +1,15 @@
+bin/
+obj/
+*.user
+.vs/
+
+# Sensitive / local-only files.
+# The Rhino NFR developer license now lives one level up, OUTSIDE this repo, so
+# no git command in here can reach it. These rules stay as a backstop in case a
+# copy ever lands inside the working tree.
+rhino developer license and info.txt
+*.licx
+secrets/
+
+# Derived bundle: just a zip of the sibling files in dist/, rebuilt by pack.ps1
+dist/**/Podium Browser for Rhino.zip

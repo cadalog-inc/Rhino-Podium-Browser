@@ -1,0 +1,189 @@
+================================================================================
+PODIUM BROWSER FOR RHINO
+Installation and User Guide - version 1.0.0 - Cadalog Inc.
+================================================================================
+
+Podium Browser for Rhino puts the Podium Browser content library inside Rhino as
+a dockable panel. Browse or search the library, switch between the Rhino (.3dm)
+and SketchUp (.skp) catalogs, and click a model to download it and place it in
+your open Rhino document - no manual downloading, unzipping or importing.
+
+
+--------------------------------------------------------------------------------
+1. BEFORE YOU INSTALL
+--------------------------------------------------------------------------------
+
+  Operating system   Windows 10 or Windows 11 (64-bit). This release is
+                     Windows-only.
+
+  Rhino              Rhino 8 (any recent service release).
+
+  Edge WebView2      Already present on Windows 11 and installed with Rhino 8.
+                     If the panel opens blank, install the free "Microsoft Edge
+                     WebView2 Runtime" from Microsoft.
+
+  Internet           Required - the library and the models are downloaded on
+                     demand.
+
+  Podium license     Free items work without a license. Paid items require your
+                     Podium Browser license key, entered in the panel exactly as
+                     you would on the website.
+
+CLOSE RHINO BEFORE INSTALLING. Rhino locks the plug-in file while it is running.
+
+
+--------------------------------------------------------------------------------
+2. CHOOSE AN INSTALLATION METHOD
+--------------------------------------------------------------------------------
+
+This package contains two folders - two ways to install the same plug-in.
+Pick ONE.
+
+  1 - Package Manager (recommended)
+      Best for normal use. Rhino tracks the version and can update or remove it
+      cleanly. One click inside Rhino.
+
+  2 - Manual (rhp)
+      Best for testing, or if the Package Manager is blocked by IT policy.
+      Drag one file onto Rhino.
+
+
+OPTION 1 - PACKAGE MANAGER (RECOMMENDED)
+........................................
+
+If the package has been published to the Rhino package server:
+
+  1. Start Rhino and run the PackageManager command (also on the Tools menu).
+  2. Search for "Podium Browser".
+  3. Click Install, then restart Rhino.
+
+To install the file supplied in folder 1 instead:
+
+  1. Close Rhino.
+  2. Open a Command Prompt (press the Windows key, type cmd, press Enter).
+  3. Run the command below on one line, replacing the folder path with the
+     location of folder "1 - Package Manager (recommended)" on your computer:
+
+     "C:\Program Files\Rhino 8\System\Yak.exe" install --source "D:\Podium Browser for Rhino\1 - Package Manager (recommended)" podium-browser
+
+  4. Start Rhino. The plug-in loads automatically.
+
+To update later, run the same command again with the newer package. To remove
+it, run:
+
+     "C:\Program Files\Rhino 8\System\Yak.exe" uninstall podium-browser
+
+
+OPTION 2 - MANUAL (.RHP)
+........................
+
+  1. Copy the whole "2 - Manual (rhp)" folder somewhere permanent, for example
+     C:\Program Files\Cadalog\Podium Browser for Rhino. Keep the "runtimes"
+     sub-folder next to the plug-in file.
+  2. Start Rhino.
+  3. Drag CadalogWebPlugin.rhp from that folder onto an open Rhino viewport.
+  4. Confirm the security prompt asking whether to load the plug-in.
+
+Rhino remembers the location, so the plug-in loads by itself from then on. If
+you move or delete the folder, Rhino will report the plug-in as missing.
+
+
+--------------------------------------------------------------------------------
+3. USING THE PLUG-IN
+--------------------------------------------------------------------------------
+
+OPENING THE PANEL
+
+  1. Type PodiumBrowser on the Rhino command line and press Enter. (Running it
+     again closes the panel.)
+  2. Drag the panel by its title to dock it - the right-hand side works well -
+     and drag its inner edge to widen it.
+
+CHOOSING A CATALOG
+
+  The "Catalog" dropdown at the top of the panel switches the library:
+
+    Rhino catalog (.3dm)     Native Rhino models. Recommended.
+    SketchUp catalog (.skp)  The original SketchUp library. Rhino 8 imports
+                             these natively as well.
+
+  Your choice is remembered the next time you start Rhino.
+
+FINDING AND PLACING A MODEL
+
+  1. Browse the categories on the left, or use the search box at the top of the
+     page.
+  2. Tick "Show Only Free Files" if you do not have a license key yet.
+  3. Click the download icon on a model.
+  4. The plug-in downloads the file and imports it. Progress is reported on the
+     Rhino command line, prefixed with [Cadalog].
+  5. The model arrives attached to your cursor: CLICK ONCE IN A VIEWPORT TO DROP
+     IT where you want it.
+
+  The placed geometry is ordinary Rhino geometry - move, scale, rotate or
+  explode it as usual. Undo removes it if you change your mind.
+
+LICENSE KEY
+
+  Free items need no key. To unlock the paid library, enter your Podium Browser
+  license key using the account button in the panel, exactly as you would on the
+  Podium Browser website.
+
+
+--------------------------------------------------------------------------------
+4. TROUBLESHOOTING
+--------------------------------------------------------------------------------
+
+  "Unknown command: PodiumBrowser"
+      The plug-in is not loaded. Open Tools > Options > Plug-ins, search for
+      "Podium Browser" and tick it, then restart Rhino.
+
+  The panel is blank or white
+      The Microsoft Edge WebView2 Runtime is missing. Install it from Microsoft
+      (search for "WebView2 Runtime"), then restart Rhino.
+
+  Nothing happens after clicking download
+      Check the Rhino command line for lines beginning with [Cadalog]. No lines
+      at all usually means the item is a paid item and no valid license key is
+      entered.
+
+  The model arrives far too large or too small
+      The model file and your document use different units. Set your document
+      units (Units command) before inserting, or scale the object afterwards.
+
+  The model is placed but not attached to the cursor
+      Rhino's importer did not leave it selected. Select the new objects and use
+      Move to position them.
+
+  Installation fails saying a file is in use
+      Rhino is still running. Close every Rhino window and try again.
+
+Downloaded files are staged in %TEMP%\Cadalog\downloads. They can be deleted at
+any time; they are only a working copy - the geometry lives in your Rhino
+document.
+
+
+--------------------------------------------------------------------------------
+5. UNINSTALLING
+--------------------------------------------------------------------------------
+
+  Package Manager   Run PackageManager in Rhino, select Podium Browser and click
+                    Uninstall. Or, with Rhino closed, run
+                    "C:\Program Files\Rhino 8\System\Yak.exe" uninstall podium-browser
+                    If anything is left behind, the files live in
+                    %AppData%\McNeel\Rhinoceros\packages\8.0 - close Rhino and
+                    delete the "podium-browser" folder there.
+
+  Manual (.rhp)     Open Tools > Options > Plug-ins, untick the plug-in, restart
+                    Rhino, then delete the folder you copied.
+
+
+--------------------------------------------------------------------------------
+6. SUPPORT
+--------------------------------------------------------------------------------
+
+Please include your Rhino version (Help > About), your Windows version, and any
+[Cadalog] lines from the Rhino command line when reporting a problem - they
+usually identify the cause immediately.
+
+================================================================================

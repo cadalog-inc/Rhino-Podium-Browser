@@ -1,0 +1,23 @@
+---
+name: podium-browser
+version: 1.0.0
+authors:
+  - Cadalog Inc.
+description: >
+  Podium Browser inside Rhino. Browse the Cadalog / SU Podium content library
+  in a dockable panel, switch between the Rhino (.3dm) and SketchUp (.skp)
+  catalogs, and click any model to download it and place it in your document
+  with a single click.
+url: https://rhino3d.pdm-plants-textures.com/
+icon: icon.png
+keywords:
+  - podium
+  - podium browser
+  - cadalog
+  - library
+  - content
+  - assets
+  - furniture
+  - vegetation
+  - textures
+  - sketchup

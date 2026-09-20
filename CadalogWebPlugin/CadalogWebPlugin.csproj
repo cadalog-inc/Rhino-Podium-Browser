@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <UseWindowsForms>false</UseWindowsForms>
+    <UseWPF>false</UseWPF>
+    <Version>1.0.0</Version>
+    <Title>Podium Browser for Rhino</Title>
+    <Description>Browse the Podium Browser content library inside Rhino and place .3dm or .skp assets straight into your model.</Description>
+    <TargetExt>.rhp</TargetExt>
+    <NoWarn>NU1701</NoWarn>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <!-- We provide our own AssemblyInfo.cs (Rhino needs a [Guid] on the assembly). -->
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Rhino 8 SDK. ExcludeAssets=runtime so Rhino's own copies are used at runtime. -->
+    <PackageReference Include="RhinoCommon" Version="8.0.23304.9001" ExcludeAssets="runtime" />
+    <!-- Shipped inside Rhino; needed at compile time because the Rhino 8.0 SDK
+         types Panels.RegisterPanel's icon parameter as System.Drawing.Icon. -->
+    <PackageReference Include="System.Drawing.Common" Version="7.0.0" ExcludeAssets="runtime" />
+    <!-- Eto.Forms ships inside Rhino. Reference it for compile, but exclude at runtime. -->
+    <PackageReference Include="Eto.Forms" Version="2.8.3" ExcludeAssets="runtime" />
+    <!-- WebView2 ships with Rhino too; we only need the managed shim at compile time. -->
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2210.55" ExcludeAssets="runtime" />
+  </ItemGroup>
+
+  <!--
+    Fail fast (instead of MSBuild's 10-second retry storm) if Rhino is running
+    and holding the previous .rhp open. Runs before the copy that would lock up.
+  -->
+  <Target Name="CheckRhinoNotRunning" BeforeTargets="CoreCompile">
+    <Exec Command="powershell -NoProfile -ExecutionPolicy Bypass -Command &quot;$p = Get-Process -Name 'Rhino' -ErrorAction SilentlyContinue; if ($p) { Write-Host 'ERROR: Rhino is running and will lock the .rhp. Close Rhino, then rebuild.'; exit 1 } else { exit 0 }&quot;"
+          ContinueOnError="false" />
+  </Target>
+
+  <!--
+    After build, print the absolute path of the .rhp so it's easy to drag onto
+    Rhino. Rhino remembers the path you dragged in once, so subsequent rebuilds
+    are picked up automatically on next Rhino launch.
+  -->
+  <Target Name="PrintPluginPath" AfterTargets="Build">
+    <Message Importance="high" Text="==&gt; Plug-in built: $([System.IO.Path]::GetFullPath('$(TargetDir)$(AssemblyName).rhp'))" />
+    <Message Importance="high" Text="==&gt; First time? Drag the .rhp onto a Rhino viewport. Otherwise just relaunch Rhino." />
+  </Target>
+
+</Project>
