@@ -32,8 +32,9 @@ retry loop.
 Drag `CadalogWebPlugin.rhp` onto an open Rhino viewport and confirm the security
 prompt. Rhino remembers the location, so it loads by itself from then on.
 
-Then run the **`PodiumBrowser`** command to toggle the panel. (`CadalogPlants`
-still works as an alias.)
+Then run the **`PodiumBrowser`** command to toggle the panel, or click the Podium
+Browser icon on the toolbar that appears. (`CadalogPlants` still works as an
+alias.)
 
 For end users, build the distributable package instead — see below.
 
@@ -47,6 +48,8 @@ For end users, build the distributable package instead — see below.
 | `AssetImporter.cs` | Downloads an asset, imports it, and starts interactive placement |
 | `PluginConfig.cs` | Home-URL resolution and the download staging folder |
 | `PodiumBrowserCommand.cs` | The `PodiumBrowser` command (and the `CadalogPlants` alias) |
+| `CadalogWebPlugin.rui` | Toolbar with one icon button that runs `PodiumBrowser`; copied next to the `.rhp` on build |
+| `assets/toolbar-icon/` | Source artwork for the toolbar icon (`Library.svg` is embedded in the `.rui`) |
 | `packaging/` | `pack.ps1`, the yak manifest, and the end-user install guide |
 
 ### How placement works
@@ -105,7 +108,7 @@ change it only on purpose.
 
 ```powershell
 "C:\Program Files\Rhino 8\System\Yak.exe" login
-"C:\Program Files\Rhino 8\System\Yak.exe" push podium-browser-1.0.0-rh8_0-win.yak
+"C:\Program Files\Rhino 8\System\Yak.exe" push podium-browser-1.0.1-rh8_0-win.yak
 ```
 
 Push to `--source https://test.yak.rhino3d.com` first — it is wiped nightly and

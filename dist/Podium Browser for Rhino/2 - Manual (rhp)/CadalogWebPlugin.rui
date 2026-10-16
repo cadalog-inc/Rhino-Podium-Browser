@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Toolbar for the plug-in. Rhino loads a .rui that sits next to the .rhp and has the same name. -->
+<RhinoUI guid="8c9b3f6e-4e7a-4f2b-9b6e-1c3d2a5f7b10" plug_in_guid="8c9b3f6e-4e7a-4f2b-9b6e-1c3d2a5f7b10" major_ver="8" minor_ver="0" localize="False" default_language_id="1033">
+  <extend_rhino_menus />
+  <menus />
+  <tool_bar_groups>
+    <tool_bar_group guid="2d9d1d04-5b74-4a62-9ccd-775f210e783d" dock_bar_guid32="2d9d1d04-5b74-4a62-9ccd-775f210e783d" dock_bar_guid64="2d9d1d04-5b74-4a62-9ccd-775f210e783d"
+                    active_tool_bar_group="2d9d1d04-5b74-4a62-9ccd-775f210e783d" single_file="False" hide_single_tab="True">
+      <text>
+        <locale_1033>Podium Browser</locale_1033>
+      </text>
+      <dock_bar_info visible="True" floating="True" />
+      <tool_bar_group_item guid="2d9d1d04-5b74-4a62-9ccd-775f210e783d" major_version="1" minor_version="1">
+        <text>
+          <locale_1033>Podium Browser</locale_1033>
+        </text>
+        <tool_bar_id>6be8a864-f777-45c5-bae1-46d6c4ccaa26</tool_bar_id>
+      </tool_bar_group_item>
+    </tool_bar_group>
+  </tool_bar_groups>
+  <tool_bars>
+    <tool_bar guid="6be8a864-f777-45c5-bae1-46d6c4ccaa26" bitmap_id="515bc98b-6d5e-47ae-a024-30f69505611b" item_display_style="control_only">
+      <text>
+        <locale_1033>Podium Browser</locale_1033>
+      </text>
+      <tool_bar_item guid="515bc98b-6d5e-47ae-a024-30f69505611b" button_display_mode="control_only" button_style="normal">
+        <text>
+          <locale_1033>Podium Browser</locale_1033>
+        </text>
+        <left_macro_id>515bc98b-6d5e-47ae-a024-30f69505611b</left_macro_id>
+      </tool_bar_item>
+    </tool_bar>
+  </tool_bars>
+  <macros>
+    <macro_item guid="515bc98b-6d5e-47ae-a024-30f69505611b" bitmap_id="515bc98b-6d5e-47ae-a024-30f69505611b">
+      <text>
+        <locale_1033>Macro.PodiumBrowser</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>Show or hide the Podium Browser panel</locale_1033>
+      </tooltip>
+      <help_text>
+        <locale_1033>Show or hide the Podium Browser panel</locale_1033>
+      </help_text>
+      <button_text>
+        <locale_1033>Podium Browser</locale_1033>
+      </button_text>
+      <menu_text>
+        <locale_1033>Podium Browser</locale_1033>
+      </menu_text>
+      <script>! _PodiumBrowser</script>
+    </macro_item>
+  </macros>
+  <icons>
+    <icon guid="515bc98b-6d5e-47ae-a024-30f69505611b">
+      <light><svg id="svg4190" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.03 32.03"><path id="path5740" d="M3.63,18.73l7.46,7.38.08-.09,4.16,4.18,10-6.05.11-1.76,4.22-2.48L26,13.8,17.42,8.64,14.61,3.21l-11,3.56,3.09,6.09Z" style="fill:#ccad77;fill-rule:evenodd"/><g id="g5734"><path id="path5686" d="M17.49,8.58,6.61,12.82l8.08,6.58,11.38-5.57L17.49,8.64l0,.85" style="fill:none;stroke:#443417;stroke-linejoin:round;stroke-width:0.38px"/><path id="path5688" d="M26.1,13.86,29.64,20l-11,6.42-3.84-6.89" style="fill:none;stroke:#443417;stroke-linejoin:round;stroke-width:0.38px"/><path id="path5690" d="M17.41,8.62,14.6,3.16l-11,3.57,3,6-2.89,6,7.48,7.42,3.53-6.74.68,10.7,9.93-6,.1-1.7" style="fill:none;stroke:#443417;stroke-linejoin:round;stroke-width:0.38px"/><path id="path5732" d="M15.31,30.17l-4-4" style="fill:none;stroke:#443417;stroke-miterlimit:2.7584213667872746;stroke-width:0.38px"/></g><path id="path5742" d="M14.59,19.44l-1.44,6.14-1.27-1Z" style="fill:#5a4a2f;fill-rule:evenodd"/><g id="g5761"><path id="path5763" d="M12.56,11.18,9.23,12.3l.3,2.53L12.1,17l5.06-.86-.09-2.83-2.82-2.58-1.81.45" style="fill:#ff0;stroke:#b6b600;stroke-linejoin:round;stroke-width:0.13792105817578187px;fill-rule:evenodd"/><path id="path5765" d="M9.24,12.25l2.69,2.81,5-1.76" style="fill:none;stroke:#b6b600;stroke-linejoin:round;stroke-width:0.13792105817578187px"/><path id="path5767" d="M11.93,15l.14,2" style="fill:none;stroke:#b6b600;stroke-linejoin:round;stroke-width:0.13792105817578187px"/></g><path id="path5771" d="M21.34,11.29l1.75,2,.19.73v1l-1.13.52-.07-2.33-.72-1.91L20,11.37,17.56,9.45l.06-.31,2.94,2.17Z" style="fill:#5a4a2f;fill-rule:evenodd"/><g id="g5780"><path id="path5773" d="M20.13,11.19l1.19,0,.8,2.09,0,2.35-3.48,1.68-.09-2.08-.95-.84,2.56-1Z" style="fill:red;stroke:#ac0000;stroke-miterlimit:2.7584213667872746;stroke-width:0.13792106011862745px;fill-rule:evenodd"/><path id="path5775" d="M20.17,13.36l1.92-.06" style="fill:none;stroke:#ac0000;stroke-miterlimit:2.7584213667872746;stroke-width:0.13792106011862745px"/></g><g id="g5756"><path id="path5750" d="M14.76,19.15l-2.92-2.36-.43-6,6-1.69,3.44,2.76.06,4.34Z" style="fill:#6d8cbc;stroke:#293c5f;stroke-linejoin:round;stroke-width:0.2179px;fill-rule:evenodd"/><path id="path5752" d="M15,19.07l-.31-5.4,6.08-1.9" style="fill:none;stroke:#293c5f;stroke-linejoin:round;stroke-width:0.2179px"/><path id="path5754" d="M11.49,10.76l3.25,2.94" style="fill:none;stroke:#293c5f;stroke-linejoin:round;stroke-width:0.2179px"/></g><polygon points="6.61 13.1 14.41 19.44 14.26 19.74 6.49 13.4 6.61 13.1" style="fill:#e1b977"/><polygon points="14.96 19.49 26 14.09 26.22 14.47 15.16 19.84 14.96 19.49" style="fill:#e1b977"/><polygon points="3.94 6.88 4.1 7.19 14.76 4 14.48 3.47 3.94 6.88" style="fill:#e1b977"/></svg></light>
+      <dark><svg id="svg4190" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.03 32.03"><path id="path5740" d="M3.63,18.73l7.46,7.38.08-.09,4.16,4.18,10-6.05.11-1.76,4.22-2.48L26,13.8,17.42,8.64,14.61,3.21l-11,3.56,3.09,6.09Z" style="fill:#ccad77;fill-rule:evenodd"/><g id="g5734"><path id="path5686" d="M17.49,8.58,6.61,12.82l8.08,6.58,11.38-5.57L17.49,8.64l0,.85" style="fill:none;stroke:#443417;stroke-linejoin:round;stroke-width:0.38px"/><path id="path5688" d="M26.1,13.86,29.64,20l-11,6.42-3.84-6.89" style="fill:none;stroke:#443417;stroke-linejoin:round;stroke-width:0.38px"/><path id="path5690" d="M17.41,8.62,14.6,3.16l-11,3.57,3,6-2.89,6,7.48,7.42,3.53-6.74.68,10.7,9.93-6,.1-1.7" style="fill:none;stroke:#443417;stroke-linejoin:round;stroke-width:0.38px"/><path id="path5732" d="M15.31,30.17l-4-4" style="fill:none;stroke:#443417;stroke-miterlimit:2.7584213667872746;stroke-width:0.38px"/></g><path id="path5742" d="M14.59,19.44l-1.44,6.14-1.27-1Z" style="fill:#5a4a2f;fill-rule:evenodd"/><g id="g5761"><path id="path5763" d="M12.56,11.18,9.23,12.3l.3,2.53L12.1,17l5.06-.86-.09-2.83-2.82-2.58-1.81.45" style="fill:#ff0;stroke:#b6b600;stroke-linejoin:round;stroke-width:0.13792105817578187px;fill-rule:evenodd"/><path id="path5765" d="M9.24,12.25l2.69,2.81,5-1.76" style="fill:none;stroke:#b6b600;stroke-linejoin:round;stroke-width:0.13792105817578187px"/><path id="path5767" d="M11.93,15l.14,2" style="fill:none;stroke:#b6b600;stroke-linejoin:round;stroke-width:0.13792105817578187px"/></g><path id="path5771" d="M21.34,11.29l1.75,2,.19.73v1l-1.13.52-.07-2.33-.72-1.91L20,11.37,17.56,9.45l.06-.31,2.94,2.17Z" style="fill:#5a4a2f;fill-rule:evenodd"/><g id="g5780"><path id="path5773" d="M20.13,11.19l1.19,0,.8,2.09,0,2.35-3.48,1.68-.09-2.08-.95-.84,2.56-1Z" style="fill:red;stroke:#ac0000;stroke-miterlimit:2.7584213667872746;stroke-width:0.13792106011862745px;fill-rule:evenodd"/><path id="path5775" d="M20.17,13.36l1.92-.06" style="fill:none;stroke:#ac0000;stroke-miterlimit:2.7584213667872746;stroke-width:0.13792106011862745px"/></g><g id="g5756"><path id="path5750" d="M14.76,19.15l-2.92-2.36-.43-6,6-1.69,3.44,2.76.06,4.34Z" style="fill:#6d8cbc;stroke:#293c5f;stroke-linejoin:round;stroke-width:0.2179px;fill-rule:evenodd"/><path id="path5752" d="M15,19.07l-.31-5.4,6.08-1.9" style="fill:none;stroke:#293c5f;stroke-linejoin:round;stroke-width:0.2179px"/><path id="path5754" d="M11.49,10.76l3.25,2.94" style="fill:none;stroke:#293c5f;stroke-linejoin:round;stroke-width:0.2179px"/></g><polygon points="6.61 13.1 14.41 19.44 14.26 19.74 6.49 13.4 6.61 13.1" style="fill:#e1b977"/><polygon points="14.96 19.49 26 14.09 26.22 14.47 15.16 19.84 14.96 19.49" style="fill:#e1b977"/><polygon points="3.94 6.88 4.1 7.19 14.76 4 14.48 3.47 3.94 6.88" style="fill:#e1b977"/></svg></dark>
+    </icon>
+  </icons>
+  <bitmaps />
+</RhinoUI>

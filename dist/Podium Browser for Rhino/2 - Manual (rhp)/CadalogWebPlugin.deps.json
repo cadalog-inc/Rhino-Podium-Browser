@@ -6,14 +6,18 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v7.0": {
-      "CadalogWebPlugin/1.0.0": {
+      "CadalogWebPlugin/1.0.1": {
         "dependencies": {
-          "Microsoft.Web.WebView2": "1.0.2210.55"
+          "Eto.Forms": "2.8.3",
+          "Microsoft.Web.WebView2": "1.0.2210.55",
+          "RhinoCommon": "8.0.23304.9001",
+          "System.Drawing.Common": "7.0.0"
         },
         "runtime": {
           "CadalogWebPlugin.rhp": {}
         }
       },
+      "Eto.Forms/2.8.3": {},
       "Microsoft.Web.WebView2/1.0.2210.55": {
         "runtimeTargets": {
           "runtimes/win-arm64/native/WebView2Loader.dll": {
@@ -32,14 +36,28 @@
             "fileVersion": "1.0.2210.55"
           }
         }
+      },
+      "Microsoft.Win32.SystemEvents/7.0.0": {},
+      "RhinoCommon/8.0.23304.9001": {},
+      "System.Drawing.Common/7.0.0": {
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "7.0.0"
+        }
       }
     }
   },
   "libraries": {
-    "CadalogWebPlugin/1.0.0": {
+    "CadalogWebPlugin/1.0.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Eto.Forms/2.8.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JlYqTXM9quui0/35H73R4r55ZtDfUA3sOZZuhvkNgzDTXp59DDvXDxZ7lRD6fge+GTumA+5AscmF9SWwgK5FUg==",
+      "path": "eto.forms/2.8.3",
+      "hashPath": "eto.forms.2.8.3.nupkg.sha512"
     },
     "Microsoft.Web.WebView2/1.0.2210.55": {
       "type": "package",
@@ -47,6 +65,27 @@
       "sha512": "sha512-pb5kuzl8TQm+ztzOnOm/qX75DXXjOQMdKlcs2hyizbZobiGzJcMcIhpmMmgg1cTGYwof2fVhlC809YScvDbm3w==",
       "path": "microsoft.web.webview2/1.0.2210.55",
       "hashPath": "microsoft.web.webview2.1.0.2210.55.nupkg.sha512"
+    },
+    "Microsoft.Win32.SystemEvents/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2nXPrhdAyAzir0gLl8Yy8S5Mnm/uBSQQA7jEsILOS1MTyS7DbmV1NgViMtvV1sfCD1ebITpNwb1NIinKeJgUVQ==",
+      "path": "microsoft.win32.systemevents/7.0.0",
+      "hashPath": "microsoft.win32.systemevents.7.0.0.nupkg.sha512"
+    },
+    "RhinoCommon/8.0.23304.9001": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hWuqXjcj/eb1/z8+bml4Bav/8Oug2p6t0mAVf37GhX9sP+M1aYNO9FappqeN8oefcIBkLBmAzr46DYNhTxFAGQ==",
+      "path": "rhinocommon/8.0.23304.9001",
+      "hashPath": "rhinocommon.8.0.23304.9001.nupkg.sha512"
+    },
+    "System.Drawing.Common/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KIX+oBU38pxkKPxvLcLfIkOV5Ien8ReN78wro7OF5/erwcmortzeFx+iBswlh2Vz6gVne0khocQudGwaO1Ey6A==",
+      "path": "system.drawing.common/7.0.0",
+      "hashPath": "system.drawing.common.7.0.0.nupkg.sha512"
     }
   }
 }
