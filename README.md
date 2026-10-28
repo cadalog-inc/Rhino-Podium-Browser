@@ -108,7 +108,7 @@ change it only on purpose.
 
 ```powershell
 "C:\Program Files\Rhino 8\System\Yak.exe" login
-"C:\Program Files\Rhino 8\System\Yak.exe" push podium-browser-1.0.1-rh8_0-win.yak
+"C:\Program Files\Rhino 8\System\Yak.exe" push podium-browser-1.0.2-rh8_0-win.yak
 ```
 
 Push to `--source https://test.yak.rhino3d.com` first — it is wiped nightly and

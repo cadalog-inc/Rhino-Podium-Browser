@@ -4,7 +4,7 @@
     <TargetFramework>net7.0-windows</TargetFramework>
     <UseWindowsForms>false</UseWindowsForms>
     <UseWPF>false</UseWPF>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <Title>Podium Browser for Rhino</Title>
     <Description>Browse the Podium Browser content library inside Rhino and place .3dm or .skp assets straight into your model.</Description>
     <TargetExt>.rhp</TargetExt>

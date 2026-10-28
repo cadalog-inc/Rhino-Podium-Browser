@@ -9,7 +9,7 @@
       <text>
         <locale_1033>Podium Browser</locale_1033>
       </text>
-      <dock_bar_info visible="True" floating="True" />
+      <dock_bar_info dock_bar="False" docking="True" horz="True" visible="True" floating="False" dock_location_u="59419" dock_location="top" />
       <tool_bar_group_item guid="2d9d1d04-5b74-4a62-9ccd-775f210e783d" major_version="1" minor_version="1">
         <text>
           <locale_1033>Podium Browser</locale_1033>

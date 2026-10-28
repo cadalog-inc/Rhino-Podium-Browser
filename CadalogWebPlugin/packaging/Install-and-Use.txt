@@ -1,6 +1,6 @@
 ================================================================================
 PODIUM BROWSER FOR RHINO
-Installation and User Guide - version 1.0.1 - Cadalog Inc.
+Installation and User Guide - version 1.0.2 - Cadalog Inc.
 ================================================================================
 
 Podium Browser for Rhino puts the Podium Browser content library inside Rhino as

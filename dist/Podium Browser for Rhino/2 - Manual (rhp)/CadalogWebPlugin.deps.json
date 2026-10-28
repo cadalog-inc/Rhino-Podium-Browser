@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v7.0": {
-      "CadalogWebPlugin/1.0.1": {
+      "CadalogWebPlugin/1.0.2": {
         "dependencies": {
           "Eto.Forms": "2.8.3",
           "Microsoft.Web.WebView2": "1.0.2210.55",
@@ -47,7 +47,7 @@
     }
   },
   "libraries": {
-    "CadalogWebPlugin/1.0.1": {
+    "CadalogWebPlugin/1.0.2": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
